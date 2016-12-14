@@ -1,0 +1,403 @@
+body {
+	background-color: #191919;  
+	color: white; 
+	text-align: center;
+	overflow-x: hidden;
+}
+p { color: #ffffff;  }
+header
+{
+	background: url(img/earth.png);
+	height: 705px;
+}
+/*----Nav bar----*/
+.navbar {
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-color: #191919;
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+.navbar-brand:focus {
+    outline: 0;
+}
+
+.navbar-custom a {
+    color: #fff;
+}
+
+.navbar-custom .nav li a {
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li a:focus,
+.navbar-custom .nav li.active {
+    outline: 0;
+    background-color: rgba(255,255,255,.2);
+}
+
+.navbar-toggle {
+    padding: 4px 6px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.navbar-toggle:focus,
+.navbar-toggle:active {
+    outline: 0;
+}
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        border-bottom: 0;
+        letter-spacing: 1px;
+        background: 0 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+        background-color: #191919;
+    }
+
+    .navbar-custom.top-nav-collapse {
+        /*border-bottom: 1px solid rgba(255,255,255,.3);*/
+    }
+}
+
+/*-=-=-=-=-=-=-=-=-=-=- */
+/* Flip Panel */
+/*-=-=-=-=-=-=-=-=-=-=- */
+.top
+{
+	font-family: Arial, Tahoma;
+	font-size: 20px;
+}
+.top_header
+{
+	height: 80px;
+}
+.top_male
+{
+	width: calc(100% / 3);
+	float: left;
+}
+.top_female
+{
+	width: calc(100% / 3);
+	float: left;
+}
+.top_album
+{
+	width: calc(100% / 3);
+	float: left;
+}
+.top_songs
+{
+	font-family: Arial, Tahoma;
+	font-size: 20px;
+	margin-top: 655px;
+}
+.top_songs_header
+{
+	height: 80px;
+}
+.top_3
+{
+	height: 515px;
+}
+.song3
+{
+	height: 455px;
+	width: calc(100% / 3);
+	float: left;
+}
+.song3_cont
+{
+	height: 60px;
+}
+.top_4
+{
+	height: 401px;
+}
+.song4
+{
+	height: 341px;
+	width: calc(100% / 4);
+	float: left;
+}
+.song8
+{
+	height: 227px;
+	width: calc(100% / 6);
+	float: left;
+}
+.season
+{
+	font-family: Arial, Tahoma;
+	font-size: 20px;
+	height: 500px;
+}
+.season_header
+{
+	margin-top: 100px;
+	height: 80px;
+}
+.winter,.summer,.autumn,.spring
+{
+	float: left;
+	width: 25%;
+}
+.season_img
+{
+	overflow: hidden;
+}
+.winter img,.summer img,.autumn img,.spring img
+{
+
+	-webkit-transition: all 0.2s ease-in;
+}
+.winter img:hover,.summer img:hover,.autumn img:hover,.spring img:hover
+{
+
+	-webkit-transform: scale(1.05);
+}
+.end
+{
+	position: relative;
+	height: 100px;
+	text-align: center;
+	background: white;
+	color: black;
+}
+
+
+.pan {
+	border:none;
+	margin: 0 auto;
+	height: 130px;  
+	position: relative;
+	-webkit-perspective: 600px;
+	-moz-perspective: 600px;
+}
+.pan .front,
+.pan .back {
+	text-align: center;
+}
+	
+.pan .front {
+	height: inherit;
+	position: absolute;
+	top: 0;
+	z-index: 900;
+	text-align: center;
+	-webkit-transform: rotateX(0deg) rotateY(0deg);
+	   -moz-transform: rotateX(0deg) rotateY(0deg);
+	-webkit-transform-style: preserve-3d;
+	   -moz-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	   -moz-backface-visibility: hidden;
+	-webkit-transition: all .4s ease-in-out;
+	   -moz-transition: all .4s ease-in-out;
+		-ms-transition: all .4s ease-in-out;
+		 -o-transition: all .4s ease-in-out;
+			transition: all .8s ease-in-out;
+}
+
+.pan .back {
+	height: inherit;
+	position: absolute;
+	top: 0;
+	z-index: 1000;
+	-webkit-transform: rotateY(-180deg);
+	   -moz-transform: rotateY(-180deg);
+	-webkit-transform-style: preserve-3d;
+	   -moz-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	   -moz-backface-visibility: hidden;
+	-webkit-transition: all .4s ease-in-out;
+	   -moz-transition: all .4s ease-in-out;
+		-ms-transition: all .4s ease-in-out;
+		 -o-transition: all .4s ease-in-out;
+			transition: all .8s ease-in-out;
+}
+.pan.flip .front {
+	z-index: 900;
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+}
+.pan.flip .back {
+	z-index: 1000;
+	-webkit-transform: rotateX(0deg) rotateY(0deg);
+	-moz-transform: rotateX(0deg) rotateY(0deg);
+}
+.box1{
+	width: calc(1366px / 3);
+	height: 620px;
+}
+.box2{
+	width: 449px;
+	background-color: #191919;
+	height: 620px;
+}
+.box1.tm
+{
+	background: #ccff66;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-image: url("img/top-male-artist.jpg");
+}
+.box1.tf
+{
+	background: #77aaff;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-image: url("img/top-female-artist.jpg");
+}
+.box1.ta
+{
+	background: #ff77aa;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-image: url("img/top-album.jpg");
+}
+.position
+{
+	width: 95px;
+	float: left;
+}
+.list_content
+{
+	width: 354px;
+	float: left;
+}
+.position_box
+{
+	font-size: 70px;
+	background: #323232;
+	border-bottom: 1px solid #666666;
+	text-align: center;
+	height: 95px;
+}
+.list
+{
+	float: left;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 10px 16px;
+}
+  
+.btn-lg {
+  font-size: 12px;
+  line-height: 1.33;
+  border-radius: 30px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+
+/***********************
+  OUTLINE BUTTONS
+************************/
+
+.btn.outline {
+    background: none;
+    padding: 12px 22px;
+}
+.btn-primary.outline {
+    border: 1px solid white;
+    color: white;
+}
+.btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
+    color: black;
+    border-color: white;
+    background: white;
+}
+.btn-primary.outline:active, .btn-primary.outline.active {
+    border-color: white;
+    color: black;
+    box-shadow: none;
+}
+
+/***********************
+  CUSTON BTN VALUES
+************************/
+
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+
+
+/*youtube api*/
+	#container{
+		/*width:100%;*/
+		width:1366px;
+		/*margin: auto;*/
+		overflow: auto;
+
+	}
+	ul{
+		/*float:left;*/
+		/*margin-left: -45px;*/
+		padding-left: 0px;
+	}
+	li{
+		float:left;
+		display: inline-block;
+	}
+	.width1{
+		height: 455px;
+		/*width: 449.656px;*/
+		width: calc(1366px / 3);
+	}
+	.width2{
+		height: 341px;
+/*	width: 336.45px;
+*/	width: calc(1366px / 4);
+	}
+	.width3{
+		height: 227px;
+	/*width: 224.828px;*/
+	width: calc(1366px / 6);
+	}

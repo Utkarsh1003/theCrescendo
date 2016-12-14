@@ -1,0 +1,271 @@
+body, html
+{
+	background-color: #191919 !important;
+	margin:0;
+  padding:0;
+  color: white;
+  text-align: center;
+}
+.headers
+{
+  width: 100%;
+  height: 100px;
+}
+.headers h1
+{
+  padding-top: 25px;
+}
+.wrapper
+{
+  /*margin-top: -57px;*/
+	/*margin: 0 8px 0 8px;*/
+}
+.wrapper a:link,a:visited,a:hover,a:active
+{
+	color: inherit;
+	text-decoration: none !important;
+}
+.compose
+{
+	overflow: hidden;
+	position: relative;
+	width: 20%;
+	float: left;
+	cursor: pointer;
+}
+.compose img
+{
+	-webkit-filter: grayscale(100%);
+  -webkit-transition: all 0.2s ease-in;
+}
+.compose:hover img
+{
+	-webkit-filter: none;
+	-webkit-transform: scale(1.05);
+}
+.newsfeed
+{
+	overflow: hidden;
+	position: relative;
+	width: 20%;
+	float: left;
+	cursor: pointer;
+}
+.newsfeed img
+{
+	-webkit-filter: grayscale(100%);
+  	-webkit-transition: all 0.2s ease-in;
+}
+.newsfeed:hover img
+{
+	-webkit-transform: scale(1.05);
+	-webkit-filter: none;
+}
+.profile
+{
+  z-index: 0;
+	overflow: hidden;
+	position: relative;
+	width: 20%;
+	float: left;
+	cursor: pointer;
+}
+.profile img
+{
+	-webkit-filter: grayscale(100%);
+  	-webkit-transition: all 0.2s ease-in;
+}
+.profile:hover img
+{
+	-webkit-filter: none;
+	-webkit-transform: scale(1.05);
+}
+.profile a
+{
+  position: absolute;
+  z-index: 50;
+}
+.trending
+{
+	overflow: hidden;
+	position: relative;
+	width: 20%;
+	float: left;
+	cursor: pointer;
+}
+.trending img
+{
+	-webkit-filter: grayscale(100%);
+  	-webkit-transition: all 0.2s ease-in;
+}
+.trending:hover img
+{
+	-webkit-filter: none;
+	-webkit-transform: scale(1.05);
+}
+.search
+{
+	overflow: hidden;
+	position: relative;
+	width: 20%;
+	float: left;
+	cursor: pointer;
+}
+.search img
+{
+	-webkit-filter: grayscale(100%);
+  	-webkit-transition: all 0.2s ease-in;
+}
+.search:hover img
+{
+	-webkit-filter: none;
+	-webkit-transform: scale(1.05);
+}
+
+.btn-success
+{
+	position:absolute;
+  bottom:100px;
+  right:60px;
+	width:150px;
+  height:auto;
+  background: #0085a1;
+  color: #ffffff;
+}
+ 
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-success
+{
+    background: #0085a1;
+}
+ 
+.btn-success:active, .btn-success.active
+{
+    background: #0085a1;
+    box-shadow: none;
+}
+.btn.sharp
+{
+  height: 67px;
+  background: #0085a1;
+  border-color: #0085a1;
+  border-radius:0;
+}
+.btn.sharp:hover
+{
+  background: #0085a1;
+  border-color: #0085a1;
+}
+h3
+{
+	float: right;
+	color: white;
+}
+
+
+
+
+
+
+.team
+{
+  width: 100%;
+}
+.member1
+{
+  text-align: center;
+  float: left;
+  width: calc(100% / 3);
+}
+.member2
+{
+  text-align: center;
+  float: left;
+  width: calc(100% / 3);
+}
+.member3
+{
+  text-align: center;
+  float: left;
+  width: calc(100% / 3);
+}
+
+
+
+
+
+
+
+
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
+.container {
+  width:500px;
+  margin:0 auto;
+  text-align:center;
+  padding-top:200px;
+  font-family:"Open Sans";
+}
+
+
+.outline-button1,.outline-button {
+  position:absolute;
+  bottom:100px;
+  right:60px;
+  width:150px;
+  height:auto;
+  /*text-indent: -999em;*/
+  color: transparent;
+  position: relative;
+  display: inline-block;
+  padding:22px 47px;
+  font-size: 16px;
+  text-align: center;
+ }
+
+.outline-button1:before,.outline-button:after, .outline-button:before {
+    /*content: attr(title);*/
+    position: absolute;
+    display: block;
+    padding:22px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 4px solid #0085a1;
+    background-color: #0085a1;
+
+    font-size: 16px;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    text-indent: 0;
+    -webkit-text-wrap:none;
+
+    -webkit-transform-origin: 50% 50% -2.07692em;
+    -webkit-transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1); 
+  }
+  .outline-button1
+  {
+    color: transparent;
+  }
+  .outline-button1:before,.outline-button:before
+  {
+    content: "My profile";
+  }
+    .outline-button:hover:before {
+    -webkit-transform: rotateX(90deg);
+    opacity: 0.2;
+  }
+   .outline-button:after {
+      content: "Login";
+    color: #fff;
+    background-color: #0085a1; 
+    -webkit-transform: rotateX(-90deg);
+  }
+    .outline-button:hover:after {
+    -webkit-transform: rotateX(0);   
+  }

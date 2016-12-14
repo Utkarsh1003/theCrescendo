@@ -1,0 +1,187 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        
+    <!-- <meta charset="utf-8"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- <meta name="description" content="SHIELD - Free Bootstrap 3 Theme"> -->
+    <!-- <meta name="author" content="Carlos Alvarez - Alvarez.is - blacktie.co"> -->
+    <!-- <link rel="shortcut icon" href="assets/ico/favicon.png"> -->
+
+    <title>theCrescendo</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/icon.png" />
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="assets/css/bootstrap.css" rel="stylesheet"> -->
+
+    <!-- Custom styles for this template -->
+    <link href="videos.css" rel="stylesheet">
+     <!-- <link href="assets/css/Tab.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/Tabs.css" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="assets/css/icomoon.css"> -->
+    <!-- <link href="assets/css/animate-custom.css" rel="stylesheet"> -->
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="trendingstyle.css" rel="stylesheet" type="text/css"> -->
+    <!-- Fonts -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+
+    
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+    
+    <script src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/retina.js"></script>
+    <script type="text/javascript" src="assets/js/tab.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="assets/js/smoothscroll.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-func.js"></script>
+    <!-- Core JavaScript Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    
+
+    <title></title>
+</head>
+
+<body>
+    <style>
+    #container{
+        width:100%;
+        margin: auto;
+        overflow: auto;
+    }
+        li{
+        display: inline-block;
+    }
+    </style>
+    <script type="text/javascript">
+
+    function apivid(search_value,idp)
+    {
+
+    var channelName=search_value;
+    console.log(idp)    
+    $(document).ready(function(){
+            $.get(
+                "https://www.googleapis.com/youtube/v3/channels",{
+                    part:'contentDetails',
+                    forUsername:channelName,
+                    key:'AIzaSyCtpbHWkAKjzWZkBC4doZqV0aG0VroZpQM'},
+                    function(data){
+                        $.each(data.items,function(i,item){
+                            console.log(item);
+                            pid=item.contentDetails.relatedPlaylists.uploads;
+                            getvids(pid);
+                            })
+                    }
+                );
+
+    function getvids(pid){
+        $.get(
+                "https://www.googleapis.com/youtube/v3/playlistItems",{
+                    part:'snippet',
+                    maxResults:9,
+                    playlistId:pid,
+                    key:'AIzaSyCtpbHWkAKjzWZkBC4doZqV0aG0VroZpQM'},
+                    function(data){
+                        var output;
+                        $.each(data.items,function(i,item){
+                            console.log(item);
+                            videoTitle=item.snippet.title;
+                            videoId=item.snippet.resourceId.videoId;
+                            output='<li><iframe src=\"//www.youtube.com/embed/'+videoId+'\"></iframe></li>';
+                            var dip="#" + idp;
+                            $('#dip').append(output); 
+                            })
+                    }
+                );
+    }
+
+
+    });
+}
+    </script>
+    <div class="wrapper">
+  <div class="tabs">
+    <div class="tab">
+      <input type="radio" name="css-tabs" id="tab-1" checked class="tab-switch">
+      <label for="tab-1" class="tab-label">Tab One</label>
+      <div class="tab-content">
+        <div id="container">
+        <ul id="results"><script type="text/javascript"> var pass='shakiraVEVO';var id ='results';apivid(pass,id)</script></ul>
+        </div>
+    </div>  
+    </div>
+    <div class="tab">
+      <input type="radio" name="css-tabs" id="tab-2" class="tab-switch">
+      <label for="tab-2" class="tab-label">Tab Two</label>
+      <div class="tab-content">
+            <div id="container2">
+                <ul id="results2"><script type="text/javascript"> var pass='Maroon5VEVO';var id ='results2';apivid(pass,id)</script></ul>
+            </div>
+       </div>
+    </div>
+    <div class="tab">
+      <input type="radio" name="css-tabs" id="tab-3" class="tab-switch">
+      <label for="tab-3" class="tab-label">Tab Three</label>
+      <div class="tab-content">
+            <div id="container3">
+        <ul id="results3"><script type="text/javascript"> var pass='TheWeekndVEVO';var id ='results3';apivid(pass,id)</script></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <p>Example line outside of tab box</p> -->
+</div>
+
+ <script type="text/javascript">
+    
+// scrollbars init
+(function() {
+    var selectors = {
+        nav: '[data-phases-nav]',
+        tabs: '[data-phases-tabs]',
+        active: '.__active'
+    };
+    var classes = {
+        active: '__active'
+    };
+    $('a', selectors.nav).on('click', function() {
+        let $this = $(this)[0];
+        $(selectors.active, selectors.nav).removeClass(classes.active);
+        $($this).addClass(classes.active);
+        $('div', selectors.tabs).removeClass(classes.active);
+        $($this.hash, selectors.tabs).addClass(classes.active);
+        return false;
+    });
+}());
+(function(document) {
+    var baseScrollConfig = {
+        wheelSpeed: 1,
+        wheelPropagation: true,
+        minScrollbarLength: 10
+    };
+    $('[data-scroll]').perfectScrollbar(baseScrollConfig);
+})(window.document);
+  
+ </script>   
+</body>
+
+</html>

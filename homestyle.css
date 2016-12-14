@@ -1,0 +1,148 @@
+body, html
+{
+	background-color: black !important;
+	margin:0;
+    padding:0;
+    overflow:hidden;
+}
+.header
+{
+	position: relative;
+	height: 55px;
+}
+
+.header h4
+{
+	color: #0099cc;
+	float: right;
+}
+.wrapper
+{
+	margin: 0 8px 0 8px;
+}
+.wrapper a:link,a:visited,a:hover,a:active
+{
+	color: inherit;
+	text-decoration: none !important;
+}
+.compose
+{
+	overflow: hidden;
+	position: relative;
+	width: 20%;
+	float: left;
+	cursor: pointer;
+}
+.compose img
+{
+	-webkit-filter: grayscale(100%);
+  	-webkit-transition: all 0.2s ease-in;
+}
+.compose:hover img
+{
+	-webkit-filter: none;
+	-webkit-transform: scale(1.05);
+}
+.newsfeed
+{
+	overflow: hidden;
+	position: relative;
+	width: 20%;
+	float: left;
+	cursor: pointer;
+}
+.newsfeed img
+{
+	-webkit-filter: grayscale(100%);
+  	-webkit-transition: all 0.2s ease-in;
+}
+.newsfeed:hover img
+{
+	-webkit-transform: scale(1.05);
+	-webkit-filter: none;
+}
+.profile
+{
+	overflow: hidden;
+	position: relative;
+	width: 20%;
+	float: left;
+	cursor: pointer;
+}
+.profile img
+{
+	-webkit-filter: grayscale(100%);
+  	-webkit-transition: all 0.2s ease-in;
+}
+.profile:hover img
+{
+	-webkit-filter: none;
+	-webkit-transform: scale(1.05);
+}
+.trending
+{
+	overflow: hidden;
+	position: relative;
+	width: 20%;
+	float: left;
+	cursor: pointer;
+}
+.trending img
+{
+	-webkit-filter: grayscale(100%);
+  	-webkit-transition: all 0.2s ease-in;
+}
+.trending:hover img
+{
+	-webkit-filter: none;
+	-webkit-transform: scale(1.05);
+}
+.search
+{
+	overflow: hidden;
+	position: relative;
+	width: 20%;
+	float: left;
+	cursor: pointer;
+}
+.search img
+{
+	-webkit-filter: grayscale(100%);
+  	-webkit-transition: all 0.2s ease-in;
+}
+.search:hover img
+{
+	-webkit-filter: none;
+	-webkit-transform: scale(1.05);
+}
+
+.btn-success
+{
+	position:absolute;
+    bottom:100px;
+    right:60px;
+	width:150px;
+    height:auto;
+    background: #0099cc;
+    color: #ffffff;
+}
+ 
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-success
+{
+    background: #33a6cc;
+}
+ 
+.btn-success:active, .btn-success.active
+{
+    background: #007299;
+    box-shadow: none;
+}
+.btn.sharp
+{
+  border-radius:0;
+}
+h3
+{
+	float: right;
+	color: white;
+}

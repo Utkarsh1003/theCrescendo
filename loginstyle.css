@@ -1,0 +1,163 @@
+body, html
+{
+	background-image: url(main1.jpg);
+	margin:0;
+    padding:0;
+    overflow:hidden;
+}
+
+
+.btn
+{
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: auto;
+    margin-top: 600px;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+.btn.outline
+{
+    background: none;
+    padding: 12px 22px;
+}
+.btn-primary.outline
+{
+    border: 2px solid #0099cc;
+    color: #0099cc;
+}
+.btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary
+{
+    color: #33a6cc;
+    border-color: #33a6cc;
+}
+.btn-primary.outline:active, .btn-primary.outline.active
+{
+    border-color: #007299;
+    color: #007299;
+    box-shadow: none;
+}
+
+
+#register-box
+{
+	position:fixed;
+	margin: auto;
+	width: 500px;
+	height: 420px;
+	background-color: #fff;
+	padding: 10px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
+}
+.rb-header
+{
+	position:relative;
+	color: #00415d;
+	margin: 5px 5px 10px 5px;
+	padding-bottom:10px;
+	border-bottom: 1px solid #eee;
+	text-align:center;
+	height:28px;
+}
+.rb-header a
+{
+	margin: 0 25px;
+	padding: 0 20px;
+	text-decoration: none;
+	color: #666;
+	font-weight: bold;
+	font-size: 15px;
+	-webkit-transition: all 0.1s linear;
+}
+.rb-header .active
+{
+	color: #029f5b;
+	font-size: 18px;
+}
+.fb-login
+{
+	position:relative;
+	float: left;
+	width: 100%;
+	height:auto;
+	padding: 10px 0 15px 0;
+	border-bottom: 1px solid #eee;
+	text-align:center;
+}
+.fb-login a
+{
+	position:relative;
+	width:calc(40% - 8px);
+	text-decoration: none;
+	color: #fff;
+	border: 1px solid rgba(0,0,0,0.05);
+	padding: 12px;
+	border-radius: 2px;
+	font-size: 12px;
+	text-transform: uppercase;
+	margin: 0 3%;
+	text-align:center;
+	background-color: #49639F;
+}
+
+.email-login,.email-signup
+{
+	position:relative;
+	float: left;
+	width: 100%;
+	height:auto;
+	margin-top: 20px;
+	text-align:center;
+}
+.form-style
+{
+	width: 100%;
+	margin-bottom: 10px;
+}
+.form-style input[type="email"],.form-style input[type="password"],.form-style input[type="text"]
+{
+	width: calc(50% - 22px);
+	height:45px;
+	outline: none;
+	border: 1px solid #ddd;
+	padding: 0 10px;
+	border-radius: 2px;
+	color: #333;
+	font-size:1.6rem;
+	-webkit-transition:all 0.1s linear;
+}
+.form-style input:focus
+{
+	border-color: #fff;
+}
+.form-style button
+{
+	width: calc(50% - 22px);
+	background-color: #1CB94E;
+	border: none;
+	outline: none;
+	color: #fff;
+	font-size: 14px;
+	font-weight: normal;
+	padding: 14px 0;
+	border-radius: 2px;
+	text-transform: uppercase;
+}
+.forgot-password
+{
+	width:50%;
+	text-align: left;
+	text-decoration: underline;
+	color: #888;
+	font-size: 1.25rem;
+}
+
+section
+{
+    height:100%;
+}

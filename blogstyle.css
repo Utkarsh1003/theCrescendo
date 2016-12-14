@@ -1,0 +1,47 @@
+.section { 
+			display: block; 
+			width: 300px; 
+			height: 600px; 
+			float: left; 
+			margin-left: 20px; 
+			opacity: .6; 
+			border-radius: 6px; 
+}
+
+.blue { background-color: #06F; }
+.green { background-color: #0f9d00; }
+.red { background-color: #F00; }
+.yellow { background-color: #ffea00; }
+
+
+* { 
+padding: 0; 
+margin: 0; 
+}
+	
+body { 
+overflow-y: hidden; 
+overflow-x: scroll; 
+}
+
+#filler { 
+position: absolute; 
+top: 0; 
+left: 0; 
+width: 3900px; 
+height: 100%; 
+}
+
+#container { 
+width: 3900px; 
+position: absolute; 
+top: 50%; 
+margin-top: -150px; 
+}
+
+.clear { 
+clear: both; 
+}
+#return-link { position: fixed; top: 12px; left: 18px; font: 11px Verdana, Arial, sans-serif; text-transform: uppercase; }
+#return-link:link, #return-link:visited { color: #06F; text-decoration: none; }
+#return-link:hover, #return-link:active { text-decoration: underline; }
