@@ -1,8 +1,6 @@
 # theCrescendo
 This is a Web Service Built using:
-
 Frontend:HTML,CSS,JavaScript,Bootstrap
-
 Backend:PHP
 
 Why Visit Us:
