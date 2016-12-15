@@ -1,9 +1,12 @@
 # theCrescendo
 This is a Web Service Built using:
+
 Frontend:HTML,CSS,JavaScript,Bootstrap
+
 Backend:PHP
 
 Why Visit Us:
+
 1.It gives you an opportunity to compose your music(EDM) using your creativity
   You can also download your creation.
   This can be done by using our Compose feature.
